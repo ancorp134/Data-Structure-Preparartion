@@ -19,27 +19,7 @@ bool cycleDFS(int node,int par,vector<bool>& vis,vector<bool>& dfsvis ,vector<ve
         return false;
     }
 
-// BFS Approach
-bool cycleBFS(int i,vector<bool>& vis ,vector<vector<int>>& adj ){
-        queue<pair<int,int>> q;
-        q.push(make_pair(i,-1));
-        vis[i]=true;
-        while(!q.empty()){
-            int node=q.front().first;
-            int par=q.front().second;
-            q.pop();
-            for(auto v:adj[node]){
-                if(!vis[v]){
-                    q.push(make_pair(v,node));
-                    vis[v]=true;
-                }
-                else if(vis[v] && par!=v) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+
 
 int main(){
     int n,m;
