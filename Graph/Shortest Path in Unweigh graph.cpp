@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-    int n,m,s,d;
+    int n,m,s,d;  // s=source ,d=destination
     cin>>n>>m>>s>>d;
 
     vector<vector<int>> adj(n);
